@@ -17,206 +17,242 @@ Proporcionar KPIs relevantes para la toma de decisiones
 📁 Fuente de Datos
 Dataset: airbnb-listings Madrid.csv
 
-📊 Estructura del Dashboard
-El dashboard está compuesto por 4 páginas interactivas:
+## 📊 Estructura del Dashboard
 
-📄 Página 1: Overview (Vista General)
-Objetivo: Proporcionar una visión general de los KPIs principales y la distribución de alojamientos.
-Visualizaciones:
+El dashboard está compuesto por **4 páginas interactivas:**
 
-4 Tarjetas KPI:
+---
 
-Total Alojamientos: 14,780
-Precio Promedio: 73.56€
-Precio Mediano: 55.00€
-Alojamientos Activos: 12,000+
+### 📄 Página 1: Overview (Vista General)
 
-Gráfico de Donut:
+**Objetivo:** Proporcionar una visión general de los KPIs principales y la distribución de alojamientos.
 
-Distribución por Room Type (Entire home/apt, Private room, Shared room)
-Tooltip: Precio Promedio
+**Visualizaciones:**
 
-Gráfico de Barras Horizontales:
+1. **4 Tarjetas KPI:**
+   - Total Alojamientos: 14,780
+   - Precio Promedio: 73.56€
+   - Precio Mediano: 55.00€
+   - Alojamientos Activos: 12,000+
 
-Top 10 Property Types por Total Alojamientos
-Formato condicional por precio
+2. **Gráfico de Donut:**
+   - Distribución por Room Type (Entire home/apt, Private room, Shared room)
+   - Tooltip: Precio Promedio
 
-Tabla Resumen:
+3. **Gráfico de Barras Horizontales:**
+   - Top 10 Property Types por Total Alojamientos
+   - Formato condicional por precio
 
-Columnas: Room Type, Total Alojamientos, Precio Promedio, Precio Mediano, P25 Precio, P75 Precio
+4. **Tabla Resumen:**
+   - Columnas: Room Type, Total Alojamientos, Precio Promedio, Precio Mediano, P25 Precio, P75 Precio
 
-Filtros (Slicers):
+**Filtros (Slicers):**
+- Neighbourhood Cleansed (desplegable)
+- Rango Precio (lista con checkboxes)
 
-Neighbourhood Cleansed (desplegable)
-Rango Precio (lista con checkboxes)
+**Interactividad:** Cross-filtering entre todos los visuales
 
-Interactividad: Cross-filtering entre todos los visuales
+---
 
-🗺️ Página 2: Análisis Geográfico
-Objetivo: Analizar la distribución de precios por barrio y ubicación geográfica.
-Visualizaciones:
+### 🗺️ Página 2: Análisis Geográfico
 
-Gráfico de Barras Horizontales (Principal):
+**Objetivo:** Analizar la distribución de precios por barrio y ubicación geográfica.
 
-Top 15 barrios ordenados por Precio Promedio
-Formato condicional con gradiente: Verde (económico) → Rojo (caro)
+**Visualizaciones:**
 
-Tabla Detallada:
+1. **Gráfico de Barras Horizontales (Principal):**
+   - Top 15 barrios ordenados por Precio Promedio
+   - Formato condicional con gradiente: Verde (económico) → Rojo (caro)
 
-Neighbourhood Cleansed
-Total Alojamientos
-Precio Promedio
-Precio Mediano
-% Diferencia vs Promedio (con formato condicional)
+2. **Tabla Detallada:**
+   - Neighbourhood Cleansed
+   - Total Alojamientos
+   - Precio Promedio
+   - Precio Mediano
+   - % Diferencia vs Promedio (con formato condicional)
 
+3. **Scatter Chart (Distribución Geográfica):**
+   - X-axis: Longitude
+   - Y-axis: Latitude
+   - Size: Total Alojamientos
+   - Legend: Room Type
+   - Simula un mapa geográfico con coordenadas
 
-Scatter Chart (Distribución Geográfica):
+**Filtros:**
+- Neighbourhood Cleansed
+- Precio Mediano
+- Precio Promedio
+- Total Alojamientos
 
-X-axis: Longitude
-Y-axis: Latitude
-Size: Total Alojamientos
-Legend: Room Type
-Simula un mapa geográfico con coordenadas
+**Título:** "Análisis de Precios por Barrio"
 
+---
 
-Filtros:
+### 🔍 Página 3: Análisis Detallado
 
-Neighbourhood Cleansed
-Precio Mediano
-Precio Promedio
-Total Alojamientos
+**Objetivo:** Análisis profundo con jerarquías y comparaciones múltiples.
 
-Título: "Análisis de Precios por Barrio"
+**Visualizaciones:**
 
-🔍 Página 3: Análisis Detallado
-Objetivo: Análisis profundo con jerarquías y comparaciones múltiples.
-Visualizaciones:
+1. **Matriz con Jerarquía (Principal):**
+   - Rows: Neighbourhood Cleansed > Property Type (expandible)
+   - Values: Total Alojamientos, Precio Promedio, Precio Mínimo, Precio Máximo
+   - Formato condicional en múltiples columnas (gradiente verde-rojo)
 
-Matriz con Jerarquía (Principal):
+2. **Gráfico de Barras Apiladas:**
+   - Top 10 barrios por Total Alojamientos
+   - Apilado por Room Type
+   - Muestra la composición de tipos de alojamiento por barrio
 
-Rows: Neighbourhood Cleansed > Property Type (expandible)
-Values: Total Alojamientos, Precio Promedio, Precio Mínimo, Precio Máximo
-Formato condicional en múltiples columnas (gradiente verde-rojo)
+3. **Scatter Chart:**
+   - X-axis: Number of Reviews
+   - Y-axis: Price
+   - Size: Accommodates
+   - Legend: Room Type
+   - Analiza la relación entre popularidad (reviews) y precio
 
+**Filtros:**
+- % Diferencia vs Promedio
+- Neighbourhood Cleansed
+- Precio Mediano
+- Precio Promedio
+- Total Alojamientos
+- Property Type (slicer)
+- Bedrooms (slider numérico)
 
-Gráfico de Barras Apiladas:
+**Título:** "Análisis Detallado de Precios"
 
-Top 10 barrios por Total Alojamientos
-Apilado por Room Type
-Muestra la composición de tipos de alojamiento por barrio
+---
 
+### 📈 Página 4: Actividad y Reviews
 
-Scatter Chart:
+**Objetivo:** Medir la actividad, popularidad y distribución de precios.
 
-X-axis: Number of Reviews
-Y-axis: Price
-Size: Accommodates
-Legend: Room Type
-Analiza la relación entre popularidad (reviews) y precio
+**Visualizaciones:**
 
+1. **4 Tarjetas KPI:**
+   - Reviews por Mes: 162.96
+   - Alojamientos Activos: 12K
+   - Tasa Ocupación Estimada: 0.45
+   - Índice Popularidad: 75,000K
 
-Filtros:
+2. **Histograma de Precios:**
+   - Distribución de alojamientos por rangos de precio (bins de 25€)
+   - Muestra la concentración de precios en el mercado
 
-% Diferencia vs Promedio
-Neighbourhood Cleansed
-Precio Mediano
-Precio Promedio
-Total Alojamientos
-Property Type (slicer)
-Bedrooms (slider numérico)
+3. **Gráfico de Barras:**
+   - Comparación de Precio Promedio y Reviews por Mes por Room Type
 
-Título: "Análisis Detallado de Precios"
+4. **Gráfico de Donut:**
+   - Distribución porcentual por Room Type
 
-📈 Página 4: Actividad y Reviews
-Objetivo: Medir la actividad, popularidad y distribución de precios.
-Visualizaciones:
+5. **2 Gauge Charts (Velocímetros):**
+   - Tasa Ocupación Estimada (0-1)
+   - Reviews por Mes
 
-4 Tarjetas KPI:
+**Filtros:**
+- Neighbourhood Cleansed
+- Room Type
 
-Reviews por Mes: 162.96
-Alojamientos Activos: 12K
-Tasa Ocupación Estimada: 0.45
-Índice Popularidad: 75,000K
+**Título:** "Análisis de Actividad y Popularidad"
 
+---
 
-Histograma de Precios:
+### Paleta de Colores:
 
-Distribución de alojamientos por rangos de precio (bins de 25€)
-Muestra la concentración de precios en el mercado
+- **Primario:** Azul (#0078D4)
+- **Positivo:** Verde (#28A745)
+- **Negativo:** Rojo (#DC3545)
+- **Neutro:** Gris (#6C757D)
+- **Gradientes:** Verde → Amarillo → Rojo para indicadores de precio
 
+### Formato de Datos:
 
-Gráfico de Barras:
+- **Precios:** Formato de moneda (€)
+- **Porcentajes:** Formato de % con 2 decimales
+- **Números grandes:** Separadores de miles
+- **Fechas:** Formato dd/mm/yyyy
 
-Comparación de Precio Promedio y Reviews por Mes por Room Type
+---
 
+## 🔄 Interactividad Implementada
 
-Gráfico de Donut:
+### Cross-Filtering (Filtrado Cruzado):
 
-Distribución porcentual por Room Type
-
-
-2 Gauge Charts:
-
-Tasa Ocupación Estimada (0-1)
-Reviews por Mes
-
-
-Filtros:
-
-Neighbourhood Cleansed
-Room Type
-
-Título: "Análisis de Actividad y Popularidad"
-
-🔄 Interactividad Implementada
-Cross-Filtering (Filtrado Cruzado):
 Todos los visuales en cada página están conectados mediante cross-filtering:
+- Al hacer clic en cualquier elemento (barra, porción de gráfico, fila de tabla), todos los demás visuales se filtran automáticamente
+- Permite exploración dinámica de los datos
 
-Al hacer clic en cualquier elemento (barra, porción de gráfico, fila de tabla), todos los demás visuales se filtran automáticamente
-Permite exploración dinámica de los datos
+### Slicers (Filtros):
 
-Slicers (Filtros):
+- **Neighbourhood Cleansed:** Permite filtrar por barrio
+- **Room Type:** Filtra por tipo de habitación
+- **Rango Precio:** Filtra por categoría de precio
+- **Property Type:** Filtra por tipo de propiedad
+- **Bedrooms:** Slider numérico para filtrar por número de habitaciones
 
-Neighbourhood Cleansed: Permite filtrar por barrio
-Room Type: Filtra por tipo de habitación
-Rango Precio: Filtra por categoría de precio
-Property Type: Filtra por tipo de propiedad
-Bedrooms: Slider numérico para filtrar por número de habitaciones
+### Tooltips:
 
-Tooltips:
 Tooltips personalizados en todos los visuales principales con información adicional contextual.
 
-📊 Insights Principales Obtenidos
-Distribución de Precios:
+---
 
-Precio promedio: 73.56€ por noche
-Precio mediano: 55.00€ (indica que la mayoría de alojamientos están por debajo del promedio)
-Concentración: La mayoría de alojamientos (>60%) están en el rango 25-100€
+## 📊 Insights Principales Obtenidos
 
-Por Barrio:
+### Distribución de Precios:
 
-Más caros: Malibú, Central & Western, 78703
-Más económicos: Teatro District, Stereo, Andratx
-Mayor concentración: Barrios céntricos tienen más alojamientos pero precios variados
+- **Precio promedio:** 73.56€ por noche
+- **Precio mediano:** 55.00€ (indica que la mayoría de alojamientos están por debajo del promedio)
+- **Concentración:** La mayoría de alojamientos (>60%) están en el rango 25-100€
 
-Por Tipo de Alojamiento:
+### Por Barrio:
 
-Entire home/apt: 60.73% del total, precio promedio más alto
-Private room: 37.86% del total, precio moderado
-Shared room: 1.41% del total, precio más bajo
-Property Type más común: Apartments
+- **Más caros:** Malibú, Central & Western, 78703
+- **Más económicos:** Teatro District, Stereo, Andratx
+- **Mayor concentración:** Barrios céntricos tienen más alojamientos pero precios variados
 
-Actividad y Popularidad:
+### Por Tipo de Alojamiento:
 
-Alojamientos activos: ~12,000 (con reviews)
-Reviews por mes promedio: 1.62
-Tasa de ocupación estimada: 45%
-Correlación: Los alojamientos con más reviews no necesariamente tienen precios más altos
+- **Entire home/apt:** 60.73% del total, precio promedio más alto
+- **Private room:** 37.86% del total, precio moderado
+- **Shared room:** 1.41% del total, precio más bajo
+- **Property Type más común:** Apartments
 
+### Actividad y Popularidad:
 
-🛠️ Tecnologías y Herramientas
+- **Alojamientos activos:** ~12,000 (con reviews)
+- **Reviews por mes promedio:** 1.62
+- **Tasa de ocupación estimada:** 45%
+- **Correlación:** Los alojamientos con más reviews no necesariamente tienen precios más altos
 
-Power BI Desktop - Versión Desktop para creación del dashboard
-Power Query - Para transformación y limpieza de datos
-DAX (Data Analysis Expressions) - Para medidas calculadas y columnas
-CSV - Formato de datos de entrada
+---
+
+## 🛠️ Tecnologías y Herramientas
+
+- **Power BI Desktop** - Versión Desktop para creación del dashboard
+- **Power Query** - Para transformación y limpieza de datos
+- **DAX (Data Analysis Expressions)** - Para medidas calculadas y columnas
+- **CSV** - Formato de datos de entrada
+
+---
+
+## 📝 Notas Adicionales
+
+- Los mapas geográficos estándar de Power BI están deshabilitados en el entorno, por lo que se utilizó un scatter plot con coordenadas (Latitude/Longitude) como alternativa efectiva.
+
+---
+
+## 🎓 Aprendizajes Clave
+
+1. **Transformación de datos** con Power Query
+2. **Creación de medidas DAX avanzadas** con funciones de contexto
+3. **Diseño de dashboards** siguiendo principios UX/UI
+4. **Análisis exploratorio** de datos inmobiliarios
+5. **Implementación de interactividad** mediante cross-filtering y slicers
+6. **Uso de formatos condicionales** para destacar insights
+7. **Creación de jerarquías** y análisis drill-down
+
+---
+
+# 📊 Exploración y Visualización de Datos
+## Análisis de Precios de Airbnb en Madrid
