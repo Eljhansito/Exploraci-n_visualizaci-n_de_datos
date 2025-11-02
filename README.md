@@ -251,8 +251,3 @@ Tooltips personalizados en todos los visuales principales con información adici
 5. **Implementación de interactividad** mediante cross-filtering y slicers
 6. **Uso de formatos condicionales** para destacar insights
 7. **Creación de jerarquías** y análisis drill-down
-
----
-
-# 📊 Exploración y Visualización de Datos
-## Análisis de Precios de Airbnb en Madrid
