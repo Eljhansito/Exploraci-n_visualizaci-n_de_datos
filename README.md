@@ -68,13 +68,6 @@ El dashboard se divide en varios apartados clave:
 
 ---
 
-## ⚠️ Limitaciones y Consideraciones
-
-Debido a políticas de seguridad de Power BI, las visualizaciones de **mapas y mapas rellenos** (que usan Bing Maps) estaban **deshabilitadas**.
-Sin embargo, los datos se representaron mediante **gráficos de barras, tablas y distribuciones** que muestran correctamente la variabilidad espacial de los precios.
-
----
-
 ## 🧩 Conclusión
 
 Este análisis permite **identificar patrones clave** en el mercado de alojamientos de Airbnb en Madrid, ofreciendo una base sólida para **toma de decisiones estratégicas** sobre precios, tipo de alojamiento y ubicación.
