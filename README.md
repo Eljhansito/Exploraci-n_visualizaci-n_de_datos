@@ -1,4 +1,4 @@
-##Exploración y visualización de datos
+#Exploración y visualización de datos
 
 📋 Descripción del Proyecto
 Este proyecto consiste en un dashboard interactivo desarrollado en Power BI para analizar los datos de alojamientos de Airbnb en Madrid. El objetivo es obtener insights relevantes sobre los precios, distribución geográfica, tipos de propiedades y patrones de actividad en la plataforma.
