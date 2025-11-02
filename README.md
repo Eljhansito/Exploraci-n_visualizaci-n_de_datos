@@ -1,7 +1,3 @@
-## Análisis de Precios de Airbnb en Madrid
-
----
-
 # 📊 Análisis de Precios y Actividad - Airbnb Madrid
 
 Este proyecto consiste en un **análisis exploratorio de datos** de alojamientos de Airbnb en la ciudad de **Madrid**, utilizando **Power BI Desktop** como herramienta principal para la **visualización e interpretación de datos**.
