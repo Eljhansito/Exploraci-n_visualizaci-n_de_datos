@@ -3,15 +3,16 @@
 ## Análisis de Precios de Airbnb en Madrid
 
 📋 Descripción del Proyecto
+
 Este proyecto consiste en un dashboard interactivo desarrollado en Power BI para analizar los datos de alojamientos de Airbnb en Madrid. El objetivo es obtener insights relevantes sobre los precios, distribución geográfica, tipos de propiedades y patrones de actividad en la plataforma.
 
 🎯 Objetivos del Análisis
 
-Analizar la distribución de precios por barrio y tipo de alojamiento
-Identificar patrones geográficos en la concentración de alojamientos
-Evaluar la relación entre precio, tipo de propiedad y características del alojamiento
-Medir la actividad y popularidad de los alojamientos mediante reviews
-Proporcionar KPIs relevantes para la toma de decisiones
+-Analizar la distribución de precios por barrio y tipo de alojamiento
+-Identificar patrones geográficos en la concentración de alojamientos
+-Evaluar la relación entre precio, tipo de propiedad y características del alojamiento
+-Medir la actividad y popularidad de los alojamientos mediante reviews
+-Proporcionar KPIs relevantes para la toma de decisiones
 
 
 📁 Fuente de Datos
